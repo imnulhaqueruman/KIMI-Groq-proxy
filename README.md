@@ -7,8 +7,6 @@ A lightweight proxy server that enables using the Kimi K2 model (via Groq) with 
 - 🚀 **Dual Deployment**: Local development or Cloudflare Workers
 - 🔄 **API Translation**: Converts Anthropic API calls to Groq format
 - 🛡️ **Type Safety**: Full TypeScript with Zod validation
-- ⚡ **High Performance**: Bun runtime for local dev, V8 isolates for edge
-- 🌐 **Global Edge**: Deploy to 300+ Cloudflare locations
 
 ## Quick Start
 
@@ -27,7 +25,7 @@ wrangler secret put GROQ_API_KEY
 # Enter your actual Groq API key when prompted
 
 # Deploy to Cloudflare Workers
-bun run deploy
+wrangler deploy
 ```
 
 2. **Use with Claude Code**:
@@ -123,31 +121,3 @@ bun run lint          # Lint TypeScript code
 bun run format        # Format code with Prettier
 ```
 
-## Dependencies
-
-### Runtime
-- **hono** - Fast web framework for both local and edge
-- **openai** - Groq API client (OpenAI-compatible)
-- **zod** - Runtime type validation
-
-### Development
-- **typescript** - TypeScript compiler
-- **wrangler** - Cloudflare Workers CLI
-- **eslint** - TypeScript linting
-- **prettier** - Code formatting
-
-## Performance
-
-**Local Development (Bun):**
-- Sub-second startup
-- Low memory usage
-- Native TypeScript support
-
-**Cloudflare Workers:**  
-- Global edge deployment (300+ locations)
-- Zero cold start with V8 isolates
-- Auto-scaling and cost-effective pay-per-request
-
-## License
-
-MIT
