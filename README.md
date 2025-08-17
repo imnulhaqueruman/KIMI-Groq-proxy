@@ -121,3 +121,5 @@ bun run lint          # Lint TypeScript code
 bun run format        # Format code with Prettier
 ```
 
+### Demo 
+![demo](download.gif)
