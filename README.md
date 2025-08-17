@@ -17,7 +17,7 @@ A lightweight proxy server that enables using the Kimi K2 model (via Groq) with 
 1. **Setup and Deploy**:
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Login to Cloudflare
 wrangler login
@@ -27,7 +27,7 @@ wrangler secret put GROQ_API_KEY
 # Enter your actual Groq API key when prompted
 
 # Deploy to Cloudflare Workers
-npm run deploy
+bun run deploy
 ```
 
 2. **Use with Claude Code**:
@@ -45,7 +45,7 @@ claude
 1. **Setup**:
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Create .env file with your Groq API key
 echo "GROQ_API_KEY=your_actual_groq_key" > .env
@@ -54,7 +54,7 @@ echo "GROQ_API_KEY=your_actual_groq_key" > .env
 2. **Start Local Server**:
 ```bash
 # Start local proxy (runs on http://localhost:7187)
-npm run start
+bun run start
 ```
 
 3. **Configure Claude Code**:
@@ -114,13 +114,13 @@ curl -X POST https://your-deployed-worker.workers.dev/v1/messages \
 ## Available Scripts
 
 ```bash
-npm run start         # Start local proxy server
-npm run dev           # Start with auto-reload
-npm run deploy        # Deploy to Cloudflare Workers  
-npm run dev:worker    # Develop with Cloudflare Workers locally
-npm run build         # Build for local deployment
-npm run lint          # Lint TypeScript code
-npm run format        # Format code with Prettier
+bun run start         # Start local proxy server
+bun run dev           # Start with auto-reload
+bun run deploy        # Deploy to Cloudflare Workers  
+bun run dev:worker    # Develop with Cloudflare Workers locally
+bun run build         # Build for local deployment
+bun run lint          # Lint TypeScript code
+bun run format        # Format code with Prettier
 ```
 
 ## Dependencies
